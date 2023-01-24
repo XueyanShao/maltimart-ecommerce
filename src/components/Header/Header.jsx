@@ -3,6 +3,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './header.css'
 
+import {motion} from 'framer-motion'
+
 import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
 import { Container, Row } from "reactstrap"
@@ -51,12 +53,14 @@ const Header = () => {
                   <div className="nav__icons">
                       <span className="fav__icon">
                           <i class="ri-heart-line"></i>
+                          <span className="badge">1</span>
                       </span>
                       <span className="cart__icon">
                           <i class="ri-shopping-bag-line"></i>
+                          <span className="badge">1</span>
                       </span>
                       <span>
-                          <img src={userIcon} alt="user-icon" />
+                          <motion.img whileTap={{ scale:1.2 }}src={userIcon} alt="user-icon" />
                       </span>
                   </div>
 
